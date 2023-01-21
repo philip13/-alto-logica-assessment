@@ -1,3 +1,4 @@
+require "float"
 class Products
   attr_accessor :name, :quantity, :price, :basic_taxes, :imported
   def initialize(name, quantity, price, basic_taxes, imported= false)
@@ -30,6 +31,6 @@ class Products
   private
   def cal_taxes( amount, percentage)
     @taxes = (percentage * amount) / 100
-    return (@taxes + amount).round(2, half: :up)
+    return (@taxes + amount).rounding(2)
   end
 end

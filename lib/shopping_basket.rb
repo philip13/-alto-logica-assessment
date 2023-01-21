@@ -1,3 +1,4 @@
+require "float"
 class ShoppingBasket
   # attr_accessor :sale_taxes, :total
 
@@ -36,10 +37,10 @@ class ShoppingBasket
 
   # getters 
   def sale_taxes
-    @sale_taxes.round(2)
+    @sale_taxes.rounding(2)
   end
 
   def total
-    @total.round(2)
+    @total.rounding(2)
   end
 end
