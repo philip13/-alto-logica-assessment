@@ -1,12 +1,12 @@
 class Products
-  attr_accessor :quantity, :price, :basic_taxes, :imported
+  attr_accessor :name, :quantity, :price, :basic_taxes, :imported
   def initialize(name, quantity, price, basic_taxes, imported= false)
     @name = name
     @quantity = quantity
     @price = price
     @basic_taxes = basic_taxes
     @imported = imported
-    @taxes = nil
+    @taxes = 0
   end
 
   def amount
@@ -21,8 +21,8 @@ class Products
     return _amount
   end
 
-  def get_taxes 
-    amount() if @taxes.nil?
+  def get_taxes
+    amount() if @taxes == 0
     return @taxes
   end
 
