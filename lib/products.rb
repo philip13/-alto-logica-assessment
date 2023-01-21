@@ -1,6 +1,7 @@
 class Products
   attr_accessor :quantity, :price, :basic_taxes, :imported
-  def initialize(quantity, price, basic_taxes, imported= false)
+  def initialize(name, quantity, price, basic_taxes, imported= false)
+    @name = name
     @quantity = quantity
     @price = price
     @basic_taxes = basic_taxes
