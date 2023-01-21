@@ -10,12 +10,12 @@ class Products
 
   def amount
     _amount = (@quantity * @price).to_f
-    if @basic_taxes
-      puts "basic_taxes #{basic_taxes}"
+    if @basic_taxes && @imported
+      _amount = cal_taxes(_amount, 15) 
+    elsif @basic_taxes
       _amount = cal_taxes(_amount, 10)
-    end
-    if @imported
-      _amount = cal_taxes(_amount, 5) if @imported
+    elsif @imported
+      _amount = cal_taxes(_amount, 5) 
     end
     return _amount
   end

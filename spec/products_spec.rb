@@ -31,4 +31,11 @@ describe 'Products' do
     puts "only taxes = #{box_choco.get_taxes}"
     expect(box_choco.amount).to eq(35.44)
   end
+
+  it "Imported bottle of prefume have % of taxex" do
+    # 1 imported bottle of perfume at 47.50
+    perfume = Products.new(1, 47.5, true, true)
+    # 1 imported bottle of perfume: 54.65
+    expect(perfume.amount).to eq(54.63)
+  end
 end
