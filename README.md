@@ -3,7 +3,7 @@
 - [Problem](#problem-statemet)
 - [Spects](#spects)
 - [Installation](#instalation)
-- Test project
+- [Test project](#test-project)
 
 ## General Requirements
 Use either Ruby or Javascript. If you feel more comfortable with another language, please let us know and we can discuss.
@@ -48,7 +48,6 @@ Write an application that prints out the receipt details for these shopping bask
       <td>1 chocolate bar at 0.85</td>
       <td>1 chocolate bar: 0.85</td>
     </tr>
-    <tr><td> </td><td> </td></tr>
     <tr>
       <td></td><td>Sales Taxes: 1.50</td>
     </tr>
