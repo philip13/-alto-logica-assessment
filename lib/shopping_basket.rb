@@ -1,4 +1,4 @@
-require "float"
+require "round"
 class ShoppingBasket
   # attr_accessor :sale_taxes, :total
 
@@ -24,7 +24,7 @@ class ShoppingBasket
       str_output << "\n#{p.quantity} #{p.name}: #{p.amount}"
     end
     str_output << "\nSales Taxes: #{sale_taxes()}"
-    str_output << "\nTotal: #{total()}"
+    str_output << "\nTotal: #{total()} \n\n"
     str_output
   end
 
@@ -37,10 +37,10 @@ class ShoppingBasket
 
   # getters 
   def sale_taxes
-    @sale_taxes.rounding(2)
+    Round.nears_05(@sale_taxes)
   end
 
   def total
-    @total.rounding(2)
+    @total
   end
 end

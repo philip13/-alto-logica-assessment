@@ -1,4 +1,4 @@
-require "float"
+require "round"
 class Products
   attr_accessor :name, :quantity, :price, :basic_taxes, :imported
   def initialize(name, quantity, price, basic_taxes, imported= false)
@@ -19,18 +19,18 @@ class Products
     elsif @imported
       _amount = cal_taxes(_amount, 5) 
     end
-    return _amount
+    _amount
   end
 
   def get_taxes
     amount() if @taxes == 0
-    return @taxes
+    @taxes
   end
 
 
   private
   def cal_taxes( amount, percentage)
     @taxes = (percentage * amount) / 100
-    return (@taxes + amount).rounding(2)
+    Round.nears_05(@taxes + amount)
   end
 end
