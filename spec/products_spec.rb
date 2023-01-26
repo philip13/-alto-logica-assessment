@@ -23,17 +23,17 @@ describe 'Products' do
     expect(choco_bar.amount).to eq(0.85)
   end
 
-  it "Imported Chocolate have 5% of taxes" do
-    # 3 imported boxes of chocolates at 11.25
-    box_choco = Products.new('imported boxes of chocolates', 3, 11.25, false, true )
-    # 3 imported box of chocolates: 35.55
-    expect(box_choco.amount).to eq(35.44)
-  end
-
   it "Imported bottle of prefume have % of taxex" do
     # 1 imported bottle of perfume at 47.50
     perfume = Products.new('imported bottle of perfume', 1, 47.5, true, true)
     # 1 imported bottle of perfume: 54.65
-    expect(perfume.amount).to eq(54.63)
+    expect(perfume.amount).to eq(54.65)
+  end
+
+  it "Imported Chocolate have 5% of taxes" do
+    # 3 imported boxes of chocolates at 11.25
+    box_choco = Products.new('imported boxes of chocolates', 3, 11.25, false, true )
+    # 3 imported box of chocolates: 35.55
+    expect(box_choco.amount).to eq(35.55)
   end
 end
