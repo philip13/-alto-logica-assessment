@@ -54,7 +54,6 @@ Write an application that prints out the receipt details for these shopping bask
     <tr>
       <td></td><td>Total: 42.32</td>
     </tr>
-    <tr> <td colspan="2"></td></tr>
     <tr>
       <th>Input 2:</th>
       <th>Ouput 2:</th>
@@ -75,10 +74,9 @@ Write an application that prints out the receipt details for these shopping bask
       <td></td>
       <td>Total: 65.15</td>
     </tr>
-    <tr> <td colspan="2"></td></tr>
     <tr>
-      <td>Input 3:</td>
-      <td>Output 3:</td>
+      <th>Input 3:</th>
+      <th>Output 3:</th>
     </tr>
     <tr>
       <td>1 imported bottle of perfume at 27.99</td>
