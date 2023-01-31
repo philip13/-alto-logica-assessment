@@ -5,8 +5,7 @@ class Round
       int_num = rounded.to_s.split(".")[0]
       digits = rounded.to_s.split(".")[1].chars
       last_d = digits[1].to_i
-      
-      
+
       if (1..4) === last_d
         digits[1] = '5'
         "#{int_num}.#{digits.join}".to_f
